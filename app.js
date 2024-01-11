@@ -20,3 +20,9 @@ form.addEventListener('click', function(e) {
     e.target.style.textDecoration = 'line-through';
   }
 })
+
+form.addEventListener('dblclick', function(e) {
+  if(e.target.tagName === 'LI') {
+    e.target.remove();
+  }
+})
