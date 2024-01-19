@@ -6,8 +6,8 @@ const list = document.querySelector('#todos');
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const newTask = document.createElement('li');
-  const delBtn = document.createElement('button');
+  let newTask = document.createElement('li');
+  let delBtn = document.createElement('button');
   delBtn.innerText = 'x';
   newTask.innerText = inputBox.value;
   newTask.isCompleted = false;
@@ -22,8 +22,8 @@ form.addEventListener('submit', function(e) {
 })
 
 list.addEventListener('click', function(e) {
-  const selectedItem = e.target.tagName.toLowerCase();
-  console.log(e.target.isCompleted)
+  let selectedItem = e.target.tagName.toLowerCase();
+  console.log(savedList[0].isCompleted = true)
   if(selectedItem === 'li' && !selectedItem.isCompleted) {
     e.target.style.textDecoration = 'line-through';
     e.target.isCompleted = true;

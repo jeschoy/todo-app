@@ -1,3 +1,6 @@
+const list = document.querySelector('#todos');
+const form = document.querySelector('form');
+
 const savedList = JSON.parse(localStorage.getItem('todos')) || [];
 for (let i = 0; i < savedList.length; i++) {
   let newTask = document.createElement('li');
